@@ -1,0 +1,8 @@
+*.js
+*.js_hi
+*.js_o
+*.js.externs
+*.html
+*.webapp
+*.stats
+.#*
