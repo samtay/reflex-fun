@@ -1,0 +1,29 @@
+name:                reflex-fun
+version:             1.2.3
+synopsis:            Playing with reflex
+description:         Playing with reflex
+homepage:            https://github.com/samtay/reflex-fun
+license:             BSD3
+license-file:        LICENSE
+author:              Sam Tay
+maintainer:          sam.chong.tay@gmail.com
+copyright:           2017 Sam Tay
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable reflex-fun
+  hs-source-dirs:      inbits/predefined-input-widgets/
+  main-is:             textInput.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  if impl(ghcjs >= 0.2.1)
+    ghcjs-options:     -dedupe
+
+  build-depends:       base
+                     , reflex >= 0.4.0
+                     , reflex-dom >= 0.3
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/samtay/reflex-fun
